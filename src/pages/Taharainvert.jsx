@@ -6,7 +6,7 @@ function Taharainvert() {
 		<>
 			<div className='container bg-blue'>
 				<div className='inline-block mb-20'>
-					<div className='grid grid-cols-8 gap-4 ml-20 mr-20 mb-20'>
+					<div className='grid grid-cols-8 gap-4 ml-0 mr-0 mb-20'>
 						{/* logo */}
 						<div className='col-span-5 sticky -top-6 -left-6 -right-4'>
 							<img src='/pm-logo-white.png' className=''></img>
