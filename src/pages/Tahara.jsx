@@ -14,21 +14,21 @@ function Tahara() {
 						<div className='hidden col-span-3'></div>
 						{/* poster & wreathes */}
 						<div className='col-span-4 h-auto'>
-							<img src='../public/tahara-poster.jpg'></img>
+							<img src='/tahara-poster.jpg'></img>
 							{/* sub-grid for wreathes */}
 							<div className='col-span-4'>
 								<div className='grid grid-cols-4 gap-1 mt-2'>
 									<div className=''>
-										<img src='../public/tahara-wreath-tiff.png'></img>
+										<img src='/tahara-wreath-tiff.png'></img>
 									</div>
 									<div className=''>
-										<img src='../public/tahara-wreath-slamdance.png'></img>
+										<img src='/tahara-wreath-slamdance.png'></img>
 									</div>
 									<div className=''>
-										<img src='../public/tahara-wreath-outfest.png'></img>
+										<img src='/tahara-wreath-outfest.png'></img>
 									</div>
 									<div className=''>
-										<img src='../public/tahara-wreath-maryland.png'></img>
+										<img src='/tahara-wreath-maryland.png'></img>
 									</div>
 								</div>
 							</div>

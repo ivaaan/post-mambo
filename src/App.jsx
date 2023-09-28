@@ -34,7 +34,6 @@ function App() {
 
 	return (
 		<>
-			<p>test</p>
 			<BrowserRouter>
 				<Routes>
 					{/*<Route path="/" element={<Home />} />*/}
