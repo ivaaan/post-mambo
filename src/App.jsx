@@ -2,7 +2,9 @@ import { useState, useEffect, useRef } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home.jsx';
 import Tahara from './pages/Tahara.jsx';
+import Taharainvert from './pages/Taharainvert.jsx';
 import Tahara2 from './pages/Tahara2.jsx';
+import Tahara2invertV2Figma from './pages/Tahara2invert.jsx';
 
 function App() {
 	// const [pages, setPages] = useState({
@@ -38,7 +40,12 @@ function App() {
 				<Routes>
 					{/*<Route path="/" element={<Home />} />*/}
 					<Route path='/tahara' element={<Tahara />} />
+					<Route path='/taharainvert' element={<Taharainvert />} />
 					<Route path='/tahara2' element={<Tahara2 />} />
+					<Route
+						path='/tahara2invertV2Figma'
+						element={<Tahara2invertV2Figma />}
+					/>
 				</Routes>
 			</BrowserRouter>
 		</>
