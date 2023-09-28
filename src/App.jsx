@@ -43,7 +43,7 @@ function App() {
 					<Route path='/taharainvert' element={<Taharainvert />} />
 					<Route path='/tahara2' element={<Tahara2 />} />
 					<Route
-						path='/tahara2invertV2Figma'
+						path='/tahara2invertv2figma'
 						element={<Tahara2invertV2Figma />}
 					/>
 				</Routes>
