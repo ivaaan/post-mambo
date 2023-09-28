@@ -1,0 +1,9 @@
+# ----
+# Automatically Generated .dropboxignore file at Thu Sep 21 13:37:35 PDT 2023
+# ----
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# ----
