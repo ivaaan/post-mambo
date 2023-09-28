@@ -1,7 +1,7 @@
 import YouTube from 'react-youtube';
 import './Tahara.css';
 
-function TaharainvertV2Figma() {
+function Taharainvert() {
 	return (
 		<>
 			<div className='container bg-blue'>
@@ -128,4 +128,4 @@ function TaharainvertV2Figma() {
 	);
 }
 
-export default TaharainvertV2Figma;
+export default Taharainvert;
