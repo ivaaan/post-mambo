@@ -36,6 +36,7 @@ function App() {
 
 	return (
 		<>
+			<Taharainvert></Taharainvert>
 			<BrowserRouter>
 				<Routes>
 					{/*<Route path="/" element={<Home />} />*/}
