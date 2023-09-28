@@ -9,7 +9,7 @@ function Tahara() {
 					<div className='grid grid-cols-8 gap-4 ml-20 mr-20 mb-20'>
 						{/* logo */}
 						<div className='col-span-5 sticky -top-6 -left-6 -right-4'>
-							<img src='../public/pm-logo-blue.png' className=''></img>
+							<img src='./public/pm-logo-blue.png' className=''></img>
 						</div>
 						<div className='hidden col-span-3'></div>
 						{/* poster & wreathes */}
