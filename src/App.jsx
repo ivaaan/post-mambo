@@ -5,35 +5,36 @@ import Tahara from './pages/Tahara.jsx';
 import Tahara2 from './pages/Tahara2.jsx';
 
 function App() {
-	const [pages, setPages] = useState({
-		home: Home,
-		tahara: Tahara,
-	});
-	const [hasMore, setHasMore] = useState(true);
-	const [page, setPage] = useState(0);
-	const elementRef = useRef(null);
+	// const [pages, setPages] = useState({
+	// 	home: Home,
+	// 	tahara: Tahara,
+	// });
+	// const [hasMore, setHasMore] = useState(true);
+	// const [page, setPage] = useState(0);
+	// const elementRef = useRef(null);
 
-	function onIntersection() {
-		const firstEntry = pages[0];
-		if (firstEntry.isIntersecting && hasMore) {
-			setPage((prevPage) => prevPage + 1);
-		}
-	}
+	// function onIntersection() {
+	// 	const firstEntry = pages[0];
+	// 	if (firstEntry.isIntersecting && hasMore) {
+	// 		setPage((prevPage) => prevPage + 1);
+	// 	}
+	// }
 
-	useEffect(() => {
-		const observer = new IntersectionObserver(onIntersection);
-		if (observer && elementRef.current) {
-			observer.observe(elementRef.current);
-		}
-		return () => {
-			if (observer) {
-				observer.disconnect();
-			}
-		};
-	}, pages);
+	// useEffect(() => {
+	// 	const observer = new IntersectionObserver(onIntersection);
+	// 	if (observer && elementRef.current) {
+	// 		observer.observe(elementRef.current);
+	// 	}
+	// 	return () => {
+	// 		if (observer) {
+	// 			observer.disconnect();
+	// 		}
+	// 	};
+	// }, pages);
 
 	return (
 		<>
+			<p>test</p>
 			<BrowserRouter>
 				<Routes>
 					{/*<Route path="/" element={<Home />} />*/}
