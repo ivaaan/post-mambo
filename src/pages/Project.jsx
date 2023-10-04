@@ -1,19 +1,53 @@
+/* eslint-disable react/prop-types */
 import YouTube from 'react-youtube';
 import './Tahara.css';
 
-function Taharainvert() {
+function Project({ projectinfo }) {
+	const colorsArr = ['blue', 'pink', 'orange', 'olive', 'navy'];
+
+	function randomColor() {
+		return colorsArr[(colorsArr.length * Math.random()) | 0];
+	}
+
+	console.log('randomColor()', randomColor());
+
+	const alignArr = ['text-left', 'text-center', 'text-right'];
+	function align() {
+		return alignArr[(alignArr.length * Math.random()) | 0];
+	}
+	const colArrCredits = [
+		'col-span-1',
+		'col-span-2',
+		'col-span-3',
+		'col-span-4',
+		'col-span-5',
+		'col-span-6',
+		'col-span-7',
+		// 'col-span-8',
+		// 'col-span-9',
+		// 'col-span-10',
+		// 'col-span-11',
+		// 'col-span-12',
+	];
+
+	function alignColCredits() {
+		return colArrCredits[(colArrCredits.length * Math.random()) | 0];
+	}
+
 	return (
 		<>
-			<div className='container bg-blue'>
-				<div className='inline-block mb-20'>
+			<div className='overlay'></div>
+
+			<div className={`container bg-${randomColor()} design`}>
+				<div className='inline-block mt-40'>
 					<div className='grid grid-cols-8 gap-4 ml-0 mr-0 mb-20'>
 						{/* logo */}
-						<div className='col-span-5 sticky -top-6 -left-6 -right-4'>
+						{/* <div className='col-span-5 sticky -top-6 -left-6 -right-4'>
 							<img src='/pm-logo-white.png' className=''></img>
-						</div>
+						</div> */}
 						{/* poster & wreathes */}
 						<div className='col-span-4 h-auto'>
-							<img src='/tahara-poster.jpg'></img>
+							<img src={projectinfo.image}></img>
 							{/* sub-grid for wreathes */}
 							<div className='col-span-4'>
 								<div className='grid grid-cols-4 gap-1 mt-2'>
@@ -34,79 +68,45 @@ function Taharainvert() {
 						</div>
 						{/* right of poster */}
 						<div className='col-span-4 h-auto'>
-							<h1 className='uppercase text-silver text-8xl text-right font-authenticSans150'>
-								Tahara
+							<h1
+								className={`${align()} + uppercase text-silver text-8xl font-authenticSans150`}>
+								{projectinfo.title}
 							</h1>
 							{/* sub-grid for credits */}
-							<div className='grid grid-cols-3 gap-2'>
-								<div className='col-span-1'></div>
-								<div className='credit rounded-2xl bg-silver text-center text-silver tracking-tight'>
-									<p className='ml-2 mr-2 text-right mt-2 text-blue font-authenticSans150'>
-										Olivia Peace
-									</p>
-									<p className='ml-2 mb-2 mr-2 text-right text-blue font-authenticSans90'>
-										Director
-									</p>
-								</div>
-								<div className='credit rounded-2xl bg-silver text-center text-silver tracking-tight'>
-									<p className='ml-2 mt-2 mr-2 text-left text-blue font-authenticSans150'>
-										Jess Zeidman
-									</p>
-									<p className='ml-2 mb-2 mr-2 text-left text-blue font-authenticSans90'>
-										Writer
-									</p>
-								</div>
-								<div className='col-span-1'></div>
-
-								<div className='credit rounded-2xl bg-silver text-center text-silver tracking-tight'>
-									<p className='ml-2 mt-2 mr-2 text-right text-blue font-authenticSans150'>
-										Troy Lewis
-									</p>
-									<p className='ml-2 mb-2 mr-2 text-right text-blue font-authenticSans90'>
-										Editor
-									</p>
-								</div>
-								<div className='credit rounded-2xl bg-silver text-center text-silver tracking-tight'>
-									<p className='ml-2 mt-2 mr-2 text-left text-blue font-authenticSans150'>
-										Justin Enoch
-									</p>
-									<p className='ml-2 mb-2 mr-2 text-left text-blue font-authenticSans90'>
-										Sound Design, Foley
-									</p>
-								</div>
-
-								<div className='col-span-2'></div>
-
-								<div className='credit rounded-2xl bg-silver text-center text-silver tracking-tight'>
-									<p className='ml-2 mt-2 mr-2 text-left text-blue font-authenticSans150'>
-										Riona Ryan
-									</p>
-									<p className='ml-2 mb-2 mr-2 text-left text-blue font-authenticSans90'>
-										Foley
-									</p>
-								</div>
+							<div className='grid grid-cols-12 gap-2'>
+								<div className={alignColCredits()}></div>
+								{projectinfo.credits.map((credit) => (
+									<>
+										<div
+											key={credit.name}
+											className={`${align()} + col-span-4 rounded-3xl bg-silver text-silver tracking-tight leading-5`}>
+											<p className='ml-4 mr-4 mt-2 text-blue font-authenticSans150'>
+												{credit.name}
+											</p>
+											<p className='ml-4 mb-2 mr-4 text-blue font-authenticSans90'>
+												{credit.role}
+											</p>
+										</div>
+										<div className={alignColCredits()}></div>
+									</>
+								))}
+								<div className={alignColCredits()}></div>
 							</div>
 							{/* description*/}
 							<p className='mt-4 text-silver text-center text-xl font-authenticSans130 tracking-tight'>
-								{`“Tahara” uses its sound design, inspired by Radiolab and Kelly
-							Reichardt, to create deeply textured and emotionally resonant
-							sonic narratives. The deliberate directorial choices, from the
-							absence of a traditional score to the square aspect ratio, allow a
-							multi-dimensional auditory experience to emerge - between the
-							magnified Foley and expansive ambiences - one that uncovers the
-							intricate inner worlds of its young adult characters as they
-							navigate the challenges of aging, processing mortality, falling in
-							love, filling in identity, and finding spirituality.`}
+								{projectinfo.description}
 							</p>
 							{/* quote */}
 							<div className='quote mt-4 text-silver text-center text-xl font-authenticSans90 rounded-2xl bg-silver tracking-tight'>
-								<p className='inline-block m-4 text-blue'>
-									{`“The Hebrew-school comedy “Tahara” mimics the zinging pleasure of overhearing teenagers chatter as they walk home from school: It’s gossipy, delicious and a tad cruel. The film eavesdrops on a group of teenage students during a critical day in their lives, when a classmate’s funeral has prompted them to wrestle with social status and school personas. Their dialogue crackles with vocal fry and viciousness as they reckon, maybe for the first time, with the consequences of school hierarchies.” - The New York Times`}
-								</p>
+								{projectinfo.pressquotes.map((quote) => (
+									<p key={quote.quote} className='inline-block m-4 text-blue'>
+										{quote.quote} <span>- {quote.publication}</span>
+									</p>
+								))}
 							</div>
 							<div className='quote mt-4 text-silver text-center rounded-lg bg-silver tracking-tight'>
 								<YouTube
-									videoId='ZjTlsAk5xCQ'
+									videoId={projectinfo.videos[0].id}
 									opts={{
 										height: '300',
 										width: '100%',
@@ -128,4 +128,4 @@ function Taharainvert() {
 	);
 }
 
-export default Taharainvert;
+export default Project;

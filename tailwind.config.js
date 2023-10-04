@@ -7,6 +7,9 @@ export default {
 			blue: '#0074EC',
 			silver: '#E8EBF7',
 			pink: '#E45978',
+			orange: '#F97854',
+			olive: '#8F943A',
+			navy: '#0E3570',
 		},
 		fontFamily: {
 			authenticSans60: ['"AUTHENTIC Sans 60"'],
@@ -17,6 +20,7 @@ export default {
 			authenticSansCondensed90: ['"AUTHENTIC Sans Condensed 90"'],
 			authenticSansCondensed130: ['"AUTHENTIC Sans Condensed 130"'],
 			authenticSansCondensed150: ['"AUTHENTIC Sans Condensed 150"'],
+			picnic: ['"PicNic-Regular"'],
 		},
 	},
 	plugins: [],

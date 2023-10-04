@@ -18,3 +18,24 @@
 	top: 0;
 	left: 0;
 }
+
+.overlay {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	/* background-color: green; */
+	opacity: 0.9;
+	mix-blend-mode: multiply;
+	z-index: 10;
+	pointer-events: none;
+}
+
+.design {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	/* filter: blur(1px); */
+	/* background: linear-gradient(129deg, #fff 0%, #c7c7c7 100%); */
+	transition: filter 0.3s ease-in-out;
+}

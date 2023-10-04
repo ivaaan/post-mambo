@@ -1,10 +1,8 @@
-import { useState, useEffect, useRef } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home.jsx';
-import Tahara from './pages/Tahara.jsx';
-import Taharainvert from './pages/Taharainvert.jsx';
-import Tahara2 from './pages/Tahara2.jsx';
-import Tahara2invert from './pages/Tahara2invert.jsx';
+// import { useState, useEffect, useRef } from 'react';
+import { BrowserRouter, Routes } from 'react-router-dom';
+import Project from './pages/Project';
+import HeaderLogo from './pages/HeaderLogo';
+import projects from './pages/projects.json';
 
 function App() {
 	// const [pages, setPages] = useState({
@@ -36,15 +34,19 @@ function App() {
 
 	return (
 		<>
-			<Taharainvert></Taharainvert>
-			<BrowserRouter>
-				<Routes>
-					{/*<Route path="/" element={<Home />} />*/}
-					<Route path='/tahara' element={<Tahara />} />
-					<Route path='/taharainvert' element={<Taharainvert />} />
-					<Route path='/tahara2' element={<Tahara2 />} />
-				</Routes>
-			</BrowserRouter>
+			<div className='bg-primary w-full overflow-hidden relative'>
+				<HeaderLogo></HeaderLogo>
+				<div>
+					{projects.map((projectinfo) => (
+						<>
+							<Project projectinfo={projectinfo} />
+						</>
+					))}
+				</div>
+				<BrowserRouter>
+					<Routes>{/*<Route path="/" element={<Home />} />*/}</Routes>
+				</BrowserRouter>
+			</div>
 		</>
 	);
 }

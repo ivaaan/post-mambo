@@ -1,0 +1,68 @@
+[
+	{
+		"title": "Tahara",
+		"image": "/tahara-poster.jpg",
+		"credits": [
+			{
+				"role": "Director",
+				"name": "Olivia Peace"
+			},
+			{
+				"role": "Writer",
+				"name": "Jess Zeidman"
+			},
+			{
+				"role": "Editor",
+				"name": "Troy Lewis"
+			},
+			{
+				"role": "Sound Design, Foley",
+				"name": "Justin Enoch"
+			},
+			{
+				"role": "Foley",
+				"name": "Riona Ryan"
+			}
+		],
+		"description": "“Tahara” uses its sound design, inspired by Radiolab and Kelly Reichardt, to create deeply textured and emotionally resonant sonic narratives. The deliberate directorial choices, from the absence of a traditional score to the square aspect ratio, allow a multi-dimensional auditory experience to emerge - between the magnified Foley and expansive ambiences - one that uncovers the intricate inner worlds of its young adult characters as they navigate the challenges of aging, processing mortality, falling in love, filling in identity, and finding spirituality.",
+		"pressquotes": [
+			{
+				"publication": "The New York Times",
+				"quote": "“The Hebrew-school comedy “Tahara” mimics the zinging pleasure of overhearing teenagers chatter as they walk home from school: It’s gossipy, delicious and a tad cruel. The film eavesdrops on a group of teenage students during a critical day in their lives, when a classmate’s funeral has prompted them to wrestle with social status and school personas. Their dialogue crackles with vocal fry and viciousness as they reckon, maybe for the first time, with the consequences of school hierarchies.”"
+			}
+		],
+		"videos": [
+			{
+				"description": "Trailer",
+				"id": "ZjTlsAk5xCQ"
+			}
+		]
+	},
+	{
+		"title": "Against Reality",
+		"image": "/againstreality-poster.jpg",
+		"credits": [
+			{
+				"role": "Director, Programmer",
+				"name": "Olivia Peace"
+			},
+			{
+				"role": "Sound Design, Mix",
+				"name": "Justin Enoch"
+			}
+		],
+		"description": "Against Reality stemmed from a collaboration between Olivia Peace, using GANS, and Justin Enoch, using MAX MSP, to chronicle lucid dreams by drawing on the collective consciousness of the internet and artificial technology to imagine a natural flow of thoughts unmediated by conventional logic.",
+		"pressquotes": [
+			{
+				"publication": "A Moveable Feast",
+				"quote": "Peace offers some gentle guidance with their voice and touches on memories that came back to mind as they worked with what the algorithms were producing, but the transfixing result allows for audiences to put themselves into it as their own experience will now doubt make meaning of the abstractions they see. However, there is an emotional precision that the filmmaker is able to achieve, a skill they brought over from their narrative feature “Tahara” that is among the most promising debuts in recent years."
+			}
+		],
+		"videos": [
+			{
+				"description": "Trailer",
+				"id": "dDIWUWkw4oE"
+			}
+		]
+	}
+]
