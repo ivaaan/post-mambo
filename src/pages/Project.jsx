@@ -3,15 +3,16 @@ import YouTube from 'react-youtube';
 import './Tahara.css';
 
 function Project({ projectinfo }) {
-	const colorsArr = ['blue', 'pink', 'orange', 'olive', 'navy'];
+	const colorsArr = ['bg-blue', 'bg-pink', 'bg-orange', 'bg-olive', 'bg-navy'];
 
 	function randomColor() {
-		return colorsArr[(colorsArr.length * Math.random()) | 0];
+		return colorsArr[Math.floor(Math.random() * colorsArr.length)];
 	}
 
 	console.log('randomColor()', randomColor());
 
 	const alignArr = ['text-left', 'text-center', 'text-right'];
+
 	function align() {
 		return alignArr[(alignArr.length * Math.random()) | 0];
 	}
@@ -38,7 +39,7 @@ function Project({ projectinfo }) {
 		<>
 			<div className='overlay'></div>
 
-			<div className={`container bg-${randomColor()} design`}>
+			<div className={`container ${randomColor()} design`}>
 				<div className='inline-block mt-40'>
 					<div className='grid grid-cols-8 gap-4 ml-0 mr-0 mb-20'>
 						{/* logo */}
