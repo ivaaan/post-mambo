@@ -2,26 +2,48 @@
 	{
 		"title": "Tahara",
 		"image": "/tahara-poster.jpg",
-		"credits": [
+		"credits": [],
+		"creditslaurels": [
 			{
+				"type": "credit",
 				"role": "Director",
 				"name": "Olivia Peace"
 			},
 			{
+				"type": "credit",
 				"role": "Writer",
 				"name": "Jess Zeidman"
 			},
 			{
+				"type": "credit",
 				"role": "Editor",
 				"name": "Troy Lewis"
 			},
 			{
+				"type": "credit",
 				"role": "Sound Design, Foley",
 				"name": "Justin Enoch"
 			},
 			{
+				"type": "credit",
 				"role": "Foley",
 				"name": "Riona Ryan"
+			},
+			{
+				"type": "laurel",
+				"image": "/laurel-tiff-2022.png"
+			},
+			{
+				"type": "laurel",
+				"image": "/tahara-laurel-slamdance.png"
+			},
+			{
+				"type": "laurel",
+				"image": "/tahara-laurel-outfest.png"
+			},
+			{
+				"type": "laurel",
+				"image": "/tahara-laurel-maryland.png"
 			}
 		],
 		"description": "“Tahara” uses its sound design, inspired by Radiolab and Kelly Reichardt, to create deeply textured and emotionally resonant sonic narratives. The deliberate directorial choices, from the absence of a traditional score to the square aspect ratio, allow a multi-dimensional auditory experience to emerge - between the magnified Foley and expansive ambiences - one that uncovers the intricate inner worlds of its young adult characters as they navigate the challenges of aging, processing mortality, falling in love, filling in identity, and finding spirituality.",
@@ -41,14 +63,28 @@
 	{
 		"title": "Against Reality",
 		"image": "/againstreality-poster.jpg",
-		"credits": [
+		"creditslaurels": [
 			{
+				"type": "credit",
 				"role": "Director, Programmer",
 				"name": "Olivia Peace"
 			},
 			{
+				"type": "credit",
 				"role": "Sound Design, Mix",
 				"name": "Justin Enoch"
+			},
+			{
+				"type": "laurel",
+				"image": "/laurel-tiff-2022.png"
+			},
+			{
+				"type": "laurel",
+				"image": "/laurel-ampas-gold-2022.png"
+			},
+			{
+				"type": "laurel",
+				"image": "/laurel-annarbor-2023.png"
 			}
 		],
 		"description": "Against Reality stemmed from a collaboration between Olivia Peace, using GANS, and Justin Enoch, using MAX MSP, to chronicle lucid dreams by drawing on the collective consciousness of the internet and artificial technology to imagine a natural flow of thoughts unmediated by conventional logic.",

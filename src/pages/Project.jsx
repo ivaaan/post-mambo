@@ -1,8 +1,31 @@
 /* eslint-disable react/prop-types */
 import YouTube from 'react-youtube';
 import './Tahara.css';
+import { useState, useEffect } from 'react';
+
+function shuffle(arra1) {
+	var ctr = arra1.length,
+		temp,
+		index;
+	while (ctr > 0) {
+		index = Math.floor(Math.random() * ctr);
+		ctr--;
+		temp = arra1[ctr];
+		arra1[ctr] = arra1[index];
+		arra1[index] = temp;
+	}
+	return arra1;
+}
 
 function Project({ projectinfo }) {
+	const [creditsLaurels, setCreditsLaurels] = useState([]);
+
+	useEffect(() => {
+		const mountArray = shuffle(projectinfo.creditslaurels);
+		setCreditsLaurels(mountArray);
+		console.log('shuffled state', creditsLaurels);
+	}, []);
+
 	const colorsArr = ['bg-blue', 'bg-pink', 'bg-orange', 'bg-olive', 'bg-navy'];
 
 	function randomColor() {
@@ -50,7 +73,7 @@ function Project({ projectinfo }) {
 						<div className='col-span-4 h-auto'>
 							<img src={projectinfo.image}></img>
 							{/* sub-grid for wreathes */}
-							<div className='col-span-4'>
+							{/* <div className='col-span-4'>
 								<div className='grid grid-cols-4 gap-1 mt-2'>
 									<div className=''>
 										<img src='/tahara-wreath-tiff.png'></img>
@@ -65,7 +88,7 @@ function Project({ projectinfo }) {
 										<img src='/tahara-wreath-maryland.png'></img>
 									</div>
 								</div>
-							</div>
+							</div> */}
 						</div>
 						{/* right of poster */}
 						<div className='col-span-4 h-auto'>
@@ -76,21 +99,33 @@ function Project({ projectinfo }) {
 							{/* sub-grid for credits */}
 							<div className='grid grid-cols-12 gap-2'>
 								<div className={alignColCredits()}></div>
-								{projectinfo.credits.map((credit) => (
-									<>
-										<div
-											key={credit.name}
-											className={`${align()} + col-span-4 rounded-3xl bg-silver text-silver tracking-tight leading-5`}>
-											<p className='ml-4 mr-4 mt-2 text-blue font-authenticSans150'>
-												{credit.name}
-											</p>
-											<p className='ml-4 mb-2 mr-4 text-blue font-authenticSans90'>
-												{credit.role}
-											</p>
-										</div>
-										<div className={alignColCredits()}></div>
-									</>
-								))}
+								{creditsLaurels.map((item) => {
+									if (item.type === 'credit') {
+										return (
+											<>
+												<div
+													key={item.name}
+													className={`${align()} + col-span-4 max-h-16 rounded-3xl bg-silver text-silver tracking-tight leading-5 flex flex-col h-screen`}>
+													<div className='m-auto'>
+														<p className='ml-4 mr-4 mt-2 text-blue font-authenticSans150'>
+															{item.name}
+														</p>
+														<p className='ml-4 mb-2 mr-4 text-blue font-authenticSans90'>
+															{item.role}
+														</p>
+													</div>
+												</div>
+												<div className={alignColCredits()}></div>
+											</>
+										);
+									} else if (item.type === 'laurel') {
+										return (
+											<div key={item.image} className='col-span-3'>
+												<img src={item.image}></img>
+											</div>
+										);
+									}
+								})}
 								<div className={alignColCredits()}></div>
 							</div>
 							{/* description*/}

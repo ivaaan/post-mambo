@@ -37,11 +37,13 @@ function App() {
 			<div className='bg-primary w-full overflow-hidden relative'>
 				<HeaderLogo></HeaderLogo>
 				<div>
+					{/* <Shuffle> */}
 					{projects.map((projectinfo) => (
 						<>
 							<Project projectinfo={projectinfo} />
 						</>
 					))}
+					{/* </Shuffle> */}
 				</div>
 				<BrowserRouter>
 					<Routes>{/*<Route path="/" element={<Home />} />*/}</Routes>
