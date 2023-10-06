@@ -1,15 +1,30 @@
 /** @type {import('tailwindcss').Config} */
 
+// eslint-disable-next-line no-undef
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 export default {
 	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
+		screens: {
+			xs: '475px',
+			...defaultTheme.screens,
+		},
 		colors: {
-			blue: '#0074EC',
 			silver: '#E8EBF7',
+			yellow: '#fefec0',
+			periwinkle: '#cdc7e5',
+			snow: '#daffef',
+			blue: '#0074EC',
 			pink: '#E45978',
 			orange: '#F97854',
 			olive: '#8F943A',
 			navy: '#0E3570',
+			green: '#4e6f21',
+			yellowgreen: '#8fc93a',
+			black: '#000015',
+			folly: '#ff1053',
+			vermilion: '#f64740',
 		},
 		fontFamily: {
 			authenticSans60: ['"AUTHENTIC Sans 60"'],

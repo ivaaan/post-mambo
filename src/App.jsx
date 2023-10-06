@@ -34,7 +34,7 @@ function App() {
 
 	return (
 		<>
-			<div className='bg-primary w-full overflow-hidden relative'>
+			<div className='w-full h-full overflow-hidden relative shrink-0 m-0 p-0'>
 				<HeaderLogo></HeaderLogo>
 				<div>
 					{/* <Shuffle> */}

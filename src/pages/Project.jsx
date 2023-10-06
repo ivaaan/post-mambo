@@ -26,7 +26,18 @@ function Project({ projectinfo }) {
 		console.log('shuffled state', creditsLaurels);
 	}, []);
 
-	const colorsArr = ['bg-blue', 'bg-pink', 'bg-orange', 'bg-olive', 'bg-navy'];
+	const colorsArr = [
+		'bg-blue',
+		'bg-pink',
+		'bg-orange',
+		'bg-olive',
+		'bg-navy',
+		'bg-green',
+		'bg-yellowgreen',
+		'bg-black',
+		'bg-folly',
+		'bg-vermilion',
+	];
 
 	function randomColor() {
 		return colorsArr[Math.floor(Math.random() * colorsArr.length)];
@@ -62,45 +73,26 @@ function Project({ projectinfo }) {
 		<>
 			<div className='overlay'></div>
 
-			<div className={`container ${randomColor()} design`}>
+			<div
+				className={`overflow-hidden ${randomColor()} design shrink-0 w-full md:shrink-0`}>
 				<div className='inline-block mt-40'>
 					<div className='grid grid-cols-8 gap-4 ml-0 mr-0 mb-20'>
-						{/* logo */}
-						{/* <div className='col-span-5 sticky -top-6 -left-6 -right-4'>
-							<img src='/pm-logo-white.png' className=''></img>
-						</div> */}
-						{/* poster & wreathes */}
-						<div className='col-span-4 h-auto'>
-							<img src={projectinfo.image}></img>
-							{/* sub-grid for wreathes */}
-							{/* <div className='col-span-4'>
-								<div className='grid grid-cols-4 gap-1 mt-2'>
-									<div className=''>
-										<img src='/tahara-wreath-tiff.png'></img>
-									</div>
-									<div className=''>
-										<img src='/tahara-wreath-slamdance.png'></img>
-									</div>
-									<div className=''>
-										<img src='/tahara-wreath-outfest.png'></img>
-									</div>
-									<div className=''>
-										<img src='/tahara-wreath-maryland.png'></img>
-									</div>
-								</div>
-							</div> */}
+						{/* Left: poster */}
+						<div className='col-start-1 xs:col-span-8 sm:col-span-8 md:col-span-8 lg:col-span-4 xl:col-span-4 2xl:col-span-4'>
+							<img src={projectinfo.image} className=''></img>
 						</div>
-						{/* right of poster */}
-						<div className='col-span-4 h-auto'>
-							<h1
-								className={`${align()} + uppercase text-silver text-8xl font-authenticSans150`}>
-								{projectinfo.title}
-							</h1>
-							{/* sub-grid for credits */}
-							<div className='grid grid-cols-12 gap-2'>
-								<div className={alignColCredits()}></div>
-								{creditsLaurels.map((item) => {
-									if (item.type === 'credit') {
+						{/* Right */}
+						<div className='col-start-1 xs:col-span-8 sm:col-span-8 md:col-span-8 lg:col-span-4 xl:col-span-4 2xl:col-span-4 sm:mt-6 md:mt-6'>
+							<div className=''>
+								<h1
+									className={`${align()} + uppercase text-silver text-8xl break-all font-authenticSans150`}>
+									{projectinfo.title}
+								</h1>
+								{/* Sub-grid for credits */}
+								<div className='grid grid-cols-12 gap-2'>
+									<div className={alignColCredits()}></div>
+									{/* Mapping through priority credits */}
+									{projectinfo.creditspriority.map((item) => {
 										return (
 											<>
 												<div
@@ -118,41 +110,63 @@ function Project({ projectinfo }) {
 												<div className={alignColCredits()}></div>
 											</>
 										);
-									} else if (item.type === 'laurel') {
-										return (
-											<div key={item.image} className='col-span-3'>
-												<img src={item.image}></img>
-											</div>
-										);
-									}
-								})}
-								<div className={alignColCredits()}></div>
-							</div>
-							{/* description*/}
-							<p className='mt-4 text-silver text-center text-xl font-authenticSans130 tracking-tight'>
-								{projectinfo.description}
-							</p>
-							{/* quote */}
-							<div className='quote mt-4 text-silver text-center text-xl font-authenticSans90 rounded-2xl bg-silver tracking-tight'>
-								{projectinfo.pressquotes.map((quote) => (
-									<p key={quote.quote} className='inline-block m-4 text-blue'>
-										{quote.quote} <span>- {quote.publication}</span>
-									</p>
-								))}
-							</div>
-							<div className='quote mt-4 text-silver text-center rounded-lg bg-silver tracking-tight'>
-								<YouTube
-									videoId={projectinfo.videos[0].id}
-									opts={{
-										height: '300',
-										width: '100%',
-										// playerVars: {
-										// 	// https://developers.google.com/youtube/player_parameters
-										// 	autoplay: 1,
-										// },
-									}}
-									containerClassName={'youtubeContainer'}
-								/>
+									})}
+									{/* Mapping through other credits and laurels */}
+									{creditsLaurels.map((item) => {
+										if (item.type === 'credit') {
+											return (
+												<>
+													<div
+														key={item.name}
+														className={`${align()} + col-span-4 max-h-16 rounded-3xl bg-silver text-silver tracking-tight leading-5 flex flex-col h-screen`}>
+														<div className='m-auto'>
+															<p className='ml-4 mr-4 mt-2 text-blue font-authenticSans150'>
+																{item.name}
+															</p>
+															<p className='ml-4 mb-2 mr-4 text-blue font-authenticSans90'>
+																{item.role}
+															</p>
+														</div>
+													</div>
+													<div className={alignColCredits()}></div>
+												</>
+											);
+										} else if (item.type === 'laurel') {
+											return (
+												<div key={item.image} className='col-span-3'>
+													<img src={item.image}></img>
+												</div>
+											);
+										}
+									})}
+									<div className={alignColCredits()}></div>
+								</div>
+								{/* description*/}
+								<p className='mt-4 text-silver text-center text-xl font-authenticSans130 tracking-tight'>
+									{projectinfo.description}
+								</p>
+								{/* quote */}
+								<div className='quote mt-4 text-silver text-center text-xl font-authenticSans90 rounded-2xl bg-silver tracking-tight'>
+									{projectinfo.pressquotes.map((quote) => (
+										<p key={quote.quote} className='inline-block m-4 text-blue'>
+											{quote.quote} <span>- {quote.publication}</span>
+										</p>
+									))}
+								</div>
+								<div className='quote mt-4 text-silver text-center rounded-lg bg-silver tracking-tight'>
+									<YouTube
+										videoId={projectinfo.videos[0].id}
+										opts={{
+											height: '300',
+											width: '100%',
+											// playerVars: {
+											// 	// https://developers.google.com/youtube/player_parameters
+											// 	autoplay: 1,
+											// },
+										}}
+										containerClassName={'youtubeContainer'}
+									/>
+								</div>
 							</div>
 						</div>
 					</div>

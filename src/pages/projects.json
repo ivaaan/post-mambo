@@ -2,7 +2,20 @@
 	{
 		"title": "Tahara",
 		"image": "/tahara-poster.jpg",
-		"credits": [],
+		"creditspriority": [
+			{
+				"type": "credit",
+				"role": "Editor",
+				"id": "2",
+				"name": "Troy Lewis"
+			},
+			{
+				"type": "credit",
+				"role": "Sound Design, Foley",
+				"id": "1",
+				"name": "Justin Enoch"
+			}
+		],
 		"creditslaurels": [
 			{
 				"type": "credit",
@@ -13,16 +26,6 @@
 				"type": "credit",
 				"role": "Writer",
 				"name": "Jess Zeidman"
-			},
-			{
-				"type": "credit",
-				"role": "Editor",
-				"name": "Troy Lewis"
-			},
-			{
-				"type": "credit",
-				"role": "Sound Design, Foley",
-				"name": "Justin Enoch"
 			},
 			{
 				"type": "credit",
@@ -63,16 +66,19 @@
 	{
 		"title": "Against Reality",
 		"image": "/againstreality-poster.jpg",
+		"creditspriority": [
+			{
+				"type": "credit",
+				"role": "Sound Design, Mix",
+				"id": "1",
+				"name": "Justin Enoch"
+			}
+		],
 		"creditslaurels": [
 			{
 				"type": "credit",
 				"role": "Director, Programmer",
 				"name": "Olivia Peace"
-			},
-			{
-				"type": "credit",
-				"role": "Sound Design, Mix",
-				"name": "Justin Enoch"
 			},
 			{
 				"type": "laurel",
@@ -98,6 +104,87 @@
 			{
 				"description": "Trailer",
 				"id": "dDIWUWkw4oE"
+			}
+		]
+	},
+	{
+		"title": "All Jacked Up and Full of Worms",
+		"image": "/alljackedup-poster.jpg",
+		"creditspriority": [
+			{
+				"type": "credit",
+				"role": "Editor",
+				"id": "2",
+				"name": "Troy Lewis"
+			}
+		],
+		"creditslaurels": [
+			{
+				"type": "credit",
+				"role": "Director",
+				"name": "Alex Phillips"
+			}
+		],
+		"description": "Roscoe, a janitor for a scuzzy love motel, drifts through life until he discovers a hidden stash of powerful hallucinogenic worms. Guided by visions of a giant floating Worm, he encounters Benny, a disturbed recluse obsessed with finding love. The two get hooked on worms and slither into the primordial ooze.",
+		"pressquotes": [],
+		"videos": [
+			{
+				"description": "Trailer",
+				"id": "cqFbzcylTSg"
+			}
+		]
+	},
+	{
+		"title": "Daughters",
+		"image": "/daughters-poster.jpg",
+		"creditspriority": [
+			{
+				"type": "credit",
+				"role": "Editor",
+				"id": "1",
+				"name": "Troy Lewis"
+			}
+		],
+		"creditslaurels": [
+			{
+				"type": "credit",
+				"role": "Director",
+				"name": "Natalie Rae"
+			}
+		],
+		"description": "DAUGHTERS follows the lives of four young girls who prepare for the first ever father/daughter dance in a jail in Washington, DC. This program came from the idea of a little girl who wanted to invite her father back into her life.",
+		"pressquotes": [],
+		"videos": [
+			{
+				"description": "Trailer",
+				"id": "cqFbzcylTSg"
+			}
+		]
+	},
+	{
+		"title": "A Revolutionary Act",
+		"image": "/arevolutionaryact-poster.jpg",
+		"creditspriority": [
+			{
+				"type": "credit",
+				"role": "Editor",
+				"id": "2",
+				"name": "Troy Lewis"
+			}
+		],
+		"creditslaurels": [
+			{
+				"type": "credit",
+				"role": "Director",
+				"name": "Malakai"
+			}
+		],
+		"description": "The fight for Black liberation lives on within Chairman Fred Hampton's  fiancée and former Black Panther Akua Njeri and their son, Chairman Fred Hampton Jr. We’re excited to premiere our new ten-minute short digital film, “A Revolutionary Act'', about the life and work of Illinois Black Panther Party Chairman Fred Hampton, directed by the talented rising star, MALAKAI. Inspired by the film JUDAS AND THE BLACK MESSIAH, this passion project aims to help us unlearn what we were taught about the Black Panther Party in order to truly understand their legacy of love and service to their community.",
+		"pressquotes": [],
+		"videos": [
+			{
+				"description": "Trailer",
+				"id": "mZdHL6n5RMM"
 			}
 		]
 	}
