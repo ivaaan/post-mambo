@@ -78,11 +78,11 @@ function Project({ projectinfo }) {
 				<div className='inline-block mt-40'>
 					<div className='grid grid-cols-8 gap-4 ml-0 mr-0 mb-20'>
 						{/* Left: poster */}
-						<div className='col-start-1 xs:col-span-8 sm:col-span-8 md:col-span-8 lg:col-span-4 xl:col-span-4 2xl:col-span-4'>
+						<div className='col-start-1 col-span-8 lg:col-span-4 xl:col-span-4 2xl:col-span-4'>
 							<img src={projectinfo.image} className=''></img>
 						</div>
 						{/* Right */}
-						<div className='col-start-1 xs:col-span-8 sm:col-span-8 md:col-span-8 lg:col-span-4 xl:col-span-4 2xl:col-span-4 sm:mt-6 md:mt-6'>
+						<div className='col-start-1 col-span-8 lg:col-span-4 xl:col-span-4 2xl:col-span-4 sm:mt-6 md:mt-6'>
 							<div className=''>
 								<h1
 									className={`${align()} + uppercase text-silver text-8xl break-all font-authenticSans150`}>
