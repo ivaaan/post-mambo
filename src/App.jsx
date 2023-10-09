@@ -1,8 +1,9 @@
 // import { useState, useEffect, useRef } from 'react';
-import { BrowserRouter, Routes } from 'react-router-dom';
-import Project from './pages/Project';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HeaderLogo from './pages/HeaderLogo';
-import projects from './pages/projects.json';
+import Menu from './pages/Menu';
+import Projects from './pages/Projects';
+import About from './pages/About';
 
 function App() {
 	// const [pages, setPages] = useState({
@@ -33,23 +34,20 @@ function App() {
 	// }, pages);
 
 	return (
-		<>
-			<div className='w-full h-full overflow-hidden relative shrink-0 m-0 p-0'>
-				<HeaderLogo></HeaderLogo>
-				<div>
-					{/* <Shuffle> */}
-					{projects.map((projectinfo) => (
-						<>
-							<Project projectinfo={projectinfo} />
-						</>
-					))}
-					{/* </Shuffle> */}
+		<Router>
+			<>
+				<div className='w-full h-full overflow-hidden relative shrink-0 m-0 p-0'>
+					<HeaderLogo></HeaderLogo>
+					<Menu />
+					<Routes>
+						<Route path='/' element={<Projects />} />
+						<Route path='/projects' element={<Projects />} />
+						<Route path='/about' element={<About />} />
+						<Route path='/contact' element={<Projects />} />
+					</Routes>
 				</div>
-				<BrowserRouter>
-					<Routes>{/*<Route path="/" element={<Home />} />*/}</Routes>
-				</BrowserRouter>
-			</div>
-		</>
+			</>
+		</Router>
 	);
 }
 
