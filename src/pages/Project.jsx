@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import YouTube from 'react-youtube';
-import './Tahara.css';
 import { useState, useEffect } from 'react';
 
 function shuffle(arra1) {

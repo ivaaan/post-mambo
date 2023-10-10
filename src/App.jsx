@@ -4,6 +4,7 @@ import HeaderLogo from './pages/HeaderLogo';
 import Menu from './pages/Menu';
 import Projects from './pages/Projects';
 import About from './pages/About';
+import Contact from './pages/Contact';
 
 function App() {
 	// const [pages, setPages] = useState({
@@ -35,18 +36,16 @@ function App() {
 
 	return (
 		<Router>
-			<>
-				<div className='w-full h-full overflow-hidden relative shrink-0 m-0 p-0'>
-					<HeaderLogo></HeaderLogo>
-					<Menu />
-					<Routes>
-						<Route path='/' element={<Projects />} />
-						<Route path='/projects' element={<Projects />} />
-						<Route path='/about' element={<About />} />
-						<Route path='/contact' element={<Projects />} />
-					</Routes>
-				</div>
-			</>
+			<div className='w-full h-full overflow-hidden relative shrink-0 m-0 p-0'>
+				<HeaderLogo></HeaderLogo>
+				<Menu />
+				<Routes>
+					<Route path='/' element={<Projects />} />
+					<Route path='/projects' element={<Projects />} />
+					<Route path='/about' element={<About />} />
+					<Route path='/contact' element={<Contact />} />
+				</Routes>
+			</div>
 		</Router>
 	);
 }

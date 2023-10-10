@@ -1,38 +1,58 @@
-function About() {
-	const colorsArr = [
-		'bg-blue',
-		'bg-pink',
-		'bg-orange',
-		'bg-olive',
-		'bg-navy',
-		'bg-green',
-		'bg-yellowgreen',
-		'bg-black',
-		'bg-folly',
-		'bg-vermilion',
-	];
+import people from '../data/people.json';
+import projects from '../data/projects.json';
+import Person from './Person';
 
-	function randomColor() {
-		return colorsArr[Math.floor(Math.random() * colorsArr.length)];
-	}
+function findProjectsByCredit(name) {
+	return projects.filter((project) => {
+		return project.creditspriority.some((credit) => credit.name === name);
+	});
+}
+
+function About() {
+	// const colorsArr = [
+	// 	'bg-blue',
+	// 	'bg-pink',
+	// 	'bg-orange',
+	// 	'bg-olive',
+	// 	'bg-navy',
+	// 	'bg-green',
+	// 	'bg-yellowgreen',
+	// 	'bg-black',
+	// 	'bg-folly',
+	// 	'bg-vermilion',
+	// ];
+
+	// function randomColor() {
+	// 	return colorsArr[Math.floor(Math.random() * colorsArr.length)];
+	// }
 
 	return (
-		<>
-			<div className='overlay'></div>
-
-			<div className={`${randomColor()} design shrink-0 w-full md:shrink-0`}>
-				<div className='inline-block mt-40'>
-					<div className='grid grid-cols-8 gap-4 ml-0 mr-0 mb-20'>
-						<div className='col-start-1 col-span-8 lg:col-span-4 xl:col-span-4 2xl:col-span-4'>
-							<h1
-								className={`uppercase text-silver text-8xl break-all font-authenticSans150`}>
-								About
-							</h1>
-						</div>
-					</div>
-				</div>
-			</div>
-		</>
+		<div>
+			{people.map((personinfo) => (
+				<>
+					<Person personinfo={personinfo} />
+					<h2>{personinfo.name} has worked on:</h2>
+					{findProjectsByCredit(personinfo.name).map((project) => {
+						{
+							console.log(findProjectsByCredit(personinfo.name));
+						}
+						return (
+							<>
+								<div
+									key={project.title}
+									className={`mb-8 max-h-16 rounded-3xl bg-silver text-silver tracking-tight leading-5 flex flex-col h-screen`}>
+									<div className='m-auto'>
+										<p className='ml-4 mr-4 mt-2 text-blue font-authenticSans150'>
+											{project.title}
+										</p>
+									</div>
+								</div>
+							</>
+						);
+					})}
+				</>
+			))}
+		</div>
 	);
 }
 

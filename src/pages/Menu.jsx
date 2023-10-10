@@ -10,7 +10,7 @@ function Menu() {
 						<Link to='/'>Home</Link>
 					</div>
 					<div className='m-4 align-middle text-center items-center'>
-						<p>Contact</p>
+						<Link to='/contact'>Contact</Link>
 					</div>
 				</div>
 
