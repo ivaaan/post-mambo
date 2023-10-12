@@ -58,8 +58,9 @@
 		],
 		"videos": [
 			{
-				"description": "Trailer",
-				"id": "ZjTlsAk5xCQ"
+				"source": "youtube",
+				"id": "ZjTlsAk5xCQ",
+				"description": "Trailer"
 			}
 		]
 	},
@@ -102,8 +103,9 @@
 		],
 		"videos": [
 			{
-				"description": "Trailer",
-				"id": "dDIWUWkw4oE"
+				"source": "youtube",
+				"id": "dDIWUWkw4oE",
+				"description": "Trailer"
 			}
 		]
 	},
@@ -129,8 +131,9 @@
 		"pressquotes": [],
 		"videos": [
 			{
-				"description": "Trailer",
-				"id": "cqFbzcylTSg"
+				"source": "youtube",
+				"id": "cqFbzcylTSg",
+				"description": "Trailer"
 			}
 		]
 	},
@@ -156,8 +159,9 @@
 		"pressquotes": [],
 		"videos": [
 			{
-				"description": "Trailer",
-				"id": "cqFbzcylTSg"
+				"source": "vimeo",
+				"id": "500578608",
+				"description": "Trailer"
 			}
 		]
 	},
@@ -183,8 +187,9 @@
 		"pressquotes": [],
 		"videos": [
 			{
-				"description": "Trailer",
-				"id": "mZdHL6n5RMM"
+				"source": "youtube",
+				"id": "mZdHL6n5RMM",
+				"description": "Trailer"
 			}
 		]
 	}
