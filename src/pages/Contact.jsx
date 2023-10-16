@@ -1,3 +1,5 @@
+import Menu from './Menu';
+
 function Contact() {
 	// const colorsArr = [
 	// 	'bg-blue',
@@ -18,6 +20,8 @@ function Contact() {
 
 	return (
 		<>
+			<Menu />
+
 			<div className='overlay'></div>
 
 			<div

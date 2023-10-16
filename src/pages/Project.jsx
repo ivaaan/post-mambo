@@ -2,6 +2,8 @@
 import YouTube from 'react-youtube';
 import Vimeo from '@u-wave/react-vimeo';
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import projects from '../data/projects.json';
 
 function shuffle(arra1) {
 	var ctr = arra1.length,
@@ -17,8 +19,17 @@ function shuffle(arra1) {
 	return arra1;
 }
 
+function findProjectById(id) {
+	return projects.filter((project) => project.id === id)[0];
+}
+
 function Project({ projectinfo }) {
 	const [creditsLaurels, setCreditsLaurels] = useState([]);
+	const { id } = useParams();
+	console.log('id', findProjectById(id));
+	projectinfo
+		? console.log('projectinfo', projectinfo)
+		: (projectinfo = findProjectById(id));
 
 	useEffect(() => {
 		const mountArray = shuffle(projectinfo.creditslaurels);

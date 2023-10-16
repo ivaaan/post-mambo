@@ -1,5 +1,6 @@
 [
 	{
+		"id": "tahara",
 		"title": "Tahara",
 		"image": "/tahara-poster.jpg",
 		"creditspriority": [
@@ -65,6 +66,7 @@
 		]
 	},
 	{
+		"id": "againstreality",
 		"title": "Against Reality",
 		"image": "/againstreality-poster.jpg",
 		"creditspriority": [
@@ -110,6 +112,7 @@
 		]
 	},
 	{
+		"id": "alljackedup",
 		"title": "All Jacked Up and Full of Worms",
 		"image": "/alljackedup-poster.jpg",
 		"creditspriority": [
@@ -138,6 +141,7 @@
 		]
 	},
 	{
+		"id": "daughters",
 		"title": "Daughters",
 		"image": "/daughters-poster.jpg",
 		"creditspriority": [
@@ -166,6 +170,7 @@
 		]
 	},
 	{
+		"id": "arevolutionaryact",
 		"title": "A Revolutionary Act",
 		"image": "/arevolutionaryact-poster.jpg",
 		"creditspriority": [

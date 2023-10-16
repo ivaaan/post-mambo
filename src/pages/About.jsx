@@ -1,6 +1,8 @@
 import people from '../data/people.json';
 import projects from '../data/projects.json';
 import Person from './Person';
+import Menu from './Menu';
+import { Link } from 'react-router-dom';
 
 function findProjectsByCredit(name) {
 	return projects.filter((project) => {
@@ -8,49 +10,81 @@ function findProjectsByCredit(name) {
 	});
 }
 
-function About() {
-	// const colorsArr = [
-	// 	'bg-blue',
-	// 	'bg-pink',
-	// 	'bg-orange',
-	// 	'bg-olive',
-	// 	'bg-navy',
-	// 	'bg-green',
-	// 	'bg-yellowgreen',
-	// 	'bg-black',
-	// 	'bg-folly',
-	// 	'bg-vermilion',
-	// ];
+function findRoleByName(name, project) {
+	return project.creditspriority.filter((credit) => credit.name === name);
+}
 
-	// function randomColor() {
-	// 	return colorsArr[Math.floor(Math.random() * colorsArr.length)];
-	// }
+function About() {
+	const alignArr = ['text-left', 'text-center', 'text-right'];
+
+	function align() {
+		return alignArr[(alignArr.length * Math.random()) | 0];
+	}
+	const colArrCredits = [
+		'col-span-1',
+		'col-span-2',
+		'col-span-3',
+		'col-span-4',
+		'col-span-5',
+		'col-span-6',
+		'col-span-7',
+		// 'col-span-8',
+		// 'col-span-9',
+		// 'col-span-10',
+		// 'col-span-11',
+		// 'col-span-12',
+	];
+
+	function alignColCredits() {
+		return colArrCredits[(colArrCredits.length * Math.random()) | 0];
+	}
 
 	return (
 		<div>
+			<Menu />
+
 			{people.map((personinfo) => (
-				<>
+				<div key={personinfo.name} className='relative'>
 					<Person personinfo={personinfo} />
-					<h2>{personinfo.name} has worked on:</h2>
-					{findProjectsByCredit(personinfo.name).map((project) => {
-						{
-							console.log(findProjectsByCredit(personinfo.name));
-						}
-						return (
-							<>
-								<div
-									key={project.title}
-									className={`mb-8 max-h-16 rounded-3xl bg-silver text-silver tracking-tight leading-5 flex flex-col h-screen`}>
-									<div className='m-auto'>
-										<p className='ml-4 mr-4 mt-2 text-blue font-authenticSans150'>
-											{project.title}
-										</p>
-									</div>
-								</div>
-							</>
-						);
-					})}
-				</>
+					<div className='bottom-16 left-16 absolute text-silver font-authenticSans150'>
+						<div className='grid grid-cols-12 gap-2'>
+							<div className={alignColCredits()}></div>
+							{findProjectsByCredit(personinfo.name).map((item) => {
+								// {
+								// 	console.log(
+								// 		'🙂',
+								// 		personinfo.name,
+								// 		item.id,
+								// 		'id',
+								// 		item.title,
+								// 		'credit',
+								// 		findRoleByName(personinfo.name, item)
+								// 	);
+								// }
+								return (
+									<>
+										<div className={alignColCredits()}></div>
+										<div
+											key={item.title}
+											className={`${align()} + col-span-4 max-h-16 rounded-3xl bg-silver tracking-tight flex flex-col h-screen`}>
+											<Link to={'/projects/' + `${item.id}`}>
+												<div className='m-auto'>
+													<p className='ml-4 mr-4 mt-2 text-blue font-authenticSans150'>
+														{item.title}
+													</p>
+													<p className='ml-4 mb-2 mr-4 text-blue font-authenticSans90'>
+														{findRoleByName(personinfo.name, item)[0].role}
+													</p>
+												</div>
+											</Link>
+										</div>
+										<div className={alignColCredits()}></div>
+									</>
+								);
+							})}
+						</div>
+					</div>
+				</div>
 			))}
 		</div>
 	);
