@@ -4,6 +4,8 @@ import Vimeo from '@u-wave/react-vimeo';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import projects from '../data/projects.json';
+import Menu from './Menu';
+import { Link } from 'react-router-dom';
 
 function shuffle(arra1) {
 	var ctr = arra1.length,
@@ -35,6 +37,8 @@ function Project({ projectinfo }) {
 		const mountArray = shuffle(projectinfo.creditslaurels);
 		setCreditsLaurels(mountArray);
 		console.log('shuffled state', creditsLaurels);
+
+		window.scrollTo(0, 0);
 	}, []);
 
 	const colorsArr = [
@@ -82,6 +86,8 @@ function Project({ projectinfo }) {
 
 	return (
 		<>
+			{id ? <Menu /> : null}
+
 			<div className='overlay'></div>
 
 			<div
@@ -109,14 +115,16 @@ function Project({ projectinfo }) {
 												<div
 													key={item.name}
 													className={`${align()} + col-span-4 max-h-16 rounded-3xl bg-silver text-silver tracking-tight leading-5 flex flex-col h-screen`}>
-													<div className='m-auto'>
-														<p className='ml-4 mr-4 mt-2 text-blue font-authenticSans150'>
-															{item.name}
-														</p>
-														<p className='ml-4 mb-2 mr-4 text-blue font-authenticSans90'>
-															{item.role}
-														</p>
-													</div>
+													<Link to={'/about/'}>
+														<div className='m-auto'>
+															<p className='ml-4 mr-4 mt-2 text-blue font-authenticSans150'>
+																{item.name}
+															</p>
+															<p className='ml-4 mb-2 mr-4 text-blue font-authenticSans90'>
+																{item.role}
+															</p>
+														</div>
+													</Link>
 												</div>
 												<div className={alignColCredits()}></div>
 											</>
