@@ -128,6 +128,14 @@
 				"type": "credit",
 				"role": "Director",
 				"name": "Alex Phillips"
+			},
+			{
+				"type": "laurel",
+				"image": "/worms-laurel-fantasia.png"
+			},
+			{
+				"type": "laurel",
+				"image": "/worms-laurel-fantastic.png"
 			}
 		],
 		"description": "Roscoe, a janitor for a scuzzy love motel, drifts through life until he discovers a hidden stash of powerful hallucinogenic worms. Guided by visions of a giant floating Worm, he encounters Benny, a disturbed recluse obsessed with finding love. The two get hooked on worms and slither into the primordial ooze.",
