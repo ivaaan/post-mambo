@@ -231,6 +231,48 @@
 		]
 	},
 	{
+		"id": "flail",
+		"title": "Flail",
+		"image": "/flail_poster.jpg",
+		"creditspriority": [
+			{
+				"type": "credit",
+				"role": "Composer and Sound Designer",
+				"id": "1",
+				"name": "Justin Enoch"
+			}
+		],
+		"creditslaurels": [
+			{
+				"type": "credit",
+				"role": "Director and Co-Writer",
+				"name": "Ben Gauthier"
+			},
+			{
+				"type": "credit",
+				"role": "Co-Writer and Star",
+				"name": "Allie Levitan"
+			},
+			{
+				"type": "laurel",
+				"image": "/sundance_24_laurel.png"
+			},
+			{
+				"type": "laurel",
+				"image": "/flail_comedy_laurel.png"
+			}
+		],
+		"description": "It's her boss's birthday, and Allie is trying as hard as she can.",
+		"pressquotes": [],
+		"videos": [
+			{
+				"source": "",
+				"id": "",
+				"description": ""
+			}
+		]
+	},
+	{
 		"id": "arevolutionaryact",
 		"title": "A Revolutionary Act",
 		"image": "/arevolutionaryact-poster.jpg",
