@@ -192,6 +192,45 @@
 		]
 	},
 	{
+		"id": "readseamission",
+		"title": "Inside the Read Sea Mission",
+		"image": "/redsea_poster.jpg",
+		"creditspriority": [
+			{
+				"type": "credit",
+				"role": "Composer",
+				"id": "1",
+				"name": "Justin Enoch"
+			}
+		],
+		"creditslaurels": [
+			{
+				"type": "credit",
+				"role": "Co-Director",
+				"name": "Jake Burghart"
+			},
+			{
+				"type": "credit",
+				"role": "Co-Director",
+				"name": "Alex Chitty"
+			},
+			{
+				"type": "credit",
+				"role": "Production Company",
+				"name": "Vice"
+			}
+		],
+		"description": "Using the cutting-edge exploration and research vessel, the OceanXplorer as a base, top marine scientists from around the world converge upon the Red Sea, searching for clues to address the escalating climate crisis. Employing subs, divers, and remotely operated vehicles, researchers visit depths approaching 10,000 feet to extract secrets from one of the most unspoiled marine ecosystems on Earth.",
+		"pressquotes": [],
+		"videos": [
+			{
+				"source": "youtube",
+				"id": "v-NrARw_3SM",
+				"description": "Full Video"
+			}
+		]
+	},
+	{
 		"id": "arevolutionaryact",
 		"title": "A Revolutionary Act",
 		"image": "/arevolutionaryact-poster.jpg",
