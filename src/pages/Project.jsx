@@ -165,7 +165,7 @@ function Project({ projectinfo }) {
 									{projectinfo.description}
 								</p>
 								{/* quote */}
-								<div className='quote mt-4 text-silver text-center text-xl font-authenticSans90 rounded-2xl bg-silver tracking-tight'>
+								<div className='quote mt-4 mb-5 text-silver text-center text-xl font-authenticSans90 rounded-2xl bg-silver tracking-tight'>
 									{projectinfo.pressquotes.map((quote) => (
 										<p key={quote.quote} className='inline-block m-4 text-blue'>
 											{quote.quote} <span>- {quote.publication}</span>

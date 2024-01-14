@@ -10,7 +10,7 @@ function HeaderLogo() {
 			</div>
 		</div>
 	) : (
-		<div className='fixed w-2/3 z-50 -top-6 -left-6 -right-4'>
+		<div className='fixed w-7/12 z-50 -top-6 -left-6 -right-4'>
 			<img src='/pm-logo-white.png'></img>
 		</div>
 	);

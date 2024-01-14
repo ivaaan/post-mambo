@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@u-wave/react-vimeo": "^0.9.10",
+    "esbuild": "^0.19.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.15.0",
@@ -30,6 +31,6 @@
     "postcss": "^8.4.30",
     "prettier": "3.0.3",
     "tailwindcss": "^3.3.3",
-    "vite": "^4.4.5"
+    "vite": "^4.5.1"
   }
 }
