@@ -48,7 +48,7 @@ function App() {
 
 	return (
 		<Router>
-			<div className='w-full h-full overflow-hidden relative shrink-0 m-0 p-0'>
+			<div className='w-screen h-full overflow-hidden relative shrink-0 m-0 p-0'>
 				{/* {location.pathname !== '/' ? <Menu /> : null} */}
 				<HeaderLogo></HeaderLogo>
 				<Routes>

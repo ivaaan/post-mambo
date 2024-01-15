@@ -88,7 +88,7 @@ function Project({ projectinfo }) {
 		<>
 			{id ? <Menu /> : null}
 
-			<div className='overlay'></div>
+			{/* <div className='overlay'></div> */}
 
 			<div
 				className={`overflow-hidden ${randomColor()} design shrink-0 w-full md:shrink-0`}>
