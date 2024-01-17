@@ -139,12 +139,13 @@
 			}
 		],
 		"description": "Roscoe, a janitor for a scuzzy love motel, drifts through life until he discovers a hidden stash of powerful hallucinogenic worms. Guided by visions of a giant floating Worm, he encounters Benny, a disturbed recluse obsessed with finding love. The two get hooked on worms and slither into the primordial ooze.",
-		"pressquotes": [],
-		"videos": [
+		"pressquotes": [
 			{
 				"publication": "Moviemaker Magazine",
 				"quote": "“I thought the theater might be raided, and we might all be arrested.”"
-			},
+			}
+		],
+		"videos": [
 			{
 				"source": "youtube",
 				"id": "cqFbzcylTSg",
@@ -159,7 +160,7 @@
 		"creditspriority": [
 			{
 				"type": "credit",
-				"role": "Editor",
+				"role": "Editor, Co-Writer",
 				"id": "1",
 				"name": "Troy Lewis"
 			}
@@ -167,8 +168,13 @@
 		"creditslaurels": [
 			{
 				"type": "credit",
-				"role": "Director",
+				"role": "Co-Director, Co-Writer",
 				"name": "Natalie Rae"
+			},
+			{
+				"type": "credit",
+				"role": "Co-Director",
+				"name": "Angela Patton"
 			},
 			{
 				"type": "credit",
@@ -176,17 +182,27 @@
 				"name": "XTR"
 			},
 			{
+				"type": "credit",
+				"role": "Production Company",
+				"name": "Object&Animal"
+			},
+			{
 				"type": "laurel",
 				"image": "/sundance_24_laurel.png"
 			}
 		],
 		"description": "A moving lesson in empathy and forgiveness, Daughters is a result of an eight-year documentary journey that filmmaker Natalie Rae and Angela Patton, an activist advocating for “at-promise” girls, embarked upon. As Aubrey, Santana, Raziah, and Ja’Ana get ready for the special event, they speak candidly about their hopes, dreams, and disappointments. There is an innate wisdom and honesty to what they share about their dads’ inconsistent presence; an awareness far beyond their years. Daughters meaningfully challenges many stereotypes around incarceration and serves as a poignant reminder that maintaining family bonds can be both healing and empowering.",
-		"pressquotes": [],
+		"pressquotes": [
+			{
+				"publication": "IndieWire",
+				"quote": "“'Daughters' leverages its access to the inmates and their families into a raw and heart-wrenching rebuke against the dehumanizing principles of America’s prison system, a rebuke made all the more powerful by its focus on wounds that may never be healed completely.”"
+			}
+		],
 		"videos": [
 			{
 				"source": "vimeo",
-				"id": "500578608",
-				"description": "Trailer"
+				"id": "",
+				"description": ""
 			}
 		]
 	},
@@ -236,7 +252,7 @@
 		"creditspriority": [
 			{
 				"type": "credit",
-				"role": "Composer and Sound Designer",
+				"role": "Sound Design, Composer",
 				"id": "1",
 				"name": "Justin Enoch"
 			}
@@ -244,12 +260,12 @@
 		"creditslaurels": [
 			{
 				"type": "credit",
-				"role": "Director and Co-Writer",
+				"role": "Director, Co-Writer",
 				"name": "Ben Gauthier"
 			},
 			{
 				"type": "credit",
-				"role": "Co-Writer and Star",
+				"role": "Co-Writer, Lead",
 				"name": "Allie Levitan"
 			},
 			{
@@ -288,6 +304,11 @@
 				"type": "credit",
 				"role": "Director",
 				"name": "Malakai"
+			},
+			{
+				"type": "credit",
+				"role": "Production Company",
+				"name": "Participant"
 			}
 		],
 		"description": "The fight for Black liberation lives on within Chairman Fred Hampton's  fiancée and former Black Panther Akua Njeri and their son, Chairman Fred Hampton Jr. We''re excited to premiere our new ten-minute short digital film, “A Revolutionary Act'', about the life and work of Illinois Black Panther Party Chairman Fred Hampton, directed by the talented rising star, MALAKAI. Inspired by the film JUDAS AND THE BLACK MESSIAH, this passion project aims to help us unlearn what we were taught about the Black Panther Party in order to truly understand their legacy of love and service to their community.",
