@@ -5,9 +5,9 @@ function Menu() {
 		<div
 			className='fixed z-50 
 		
-		bottom-6 right-6
-		
-		lg:top-12 xl:top-12 2xl:top-12 md:right-20 lg:right-40 xl:right-60
+		bottom-6 
+		max-[640px]:right-6
+		lg:left-6 xl:left-6 2xl:left-6 md:left-6 lg:left-6 xl:left-6
 		
 		font-authenticSans150'>
 			<div className='rounded-3xl bg-silver text-blue tracking-tight flex relative'>

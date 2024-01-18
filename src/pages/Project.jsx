@@ -92,7 +92,7 @@ function Project({ projectinfo }) {
 
 			<div
 				className={`overflow-hidden ${randomColor()} design shrink-0 w-full md:shrink-0`}>
-				<div className='inline-block mt-40'>
+				<div className='inline-block mt-20'>
 					<div className='grid grid-cols-8 gap-4 ml-0 mr-0 mb-20'>
 						{/* Left: poster */}
 						<div className='col-start-1 col-span-8 lg:col-span-4 xl:col-span-4 2xl:col-span-4'>
@@ -114,20 +114,22 @@ function Project({ projectinfo }) {
 									{projectinfo.creditspriority.map((item) => {
 										return (
 											<>
+												{/* <a href='/about'> */}
 												<div
 													key={item.name}
-													className={`${align()} + col-span-4 max-h-32 rounded-3xl bg-silver text-silver tracking-tight leading-5 flex flex-col align-middle`}>
-													<Link to={'/about/'}>
-														<div className='m-auto align-middle'>
-															<p className='ml-4 mr-4 mt-2 text-blue font-authenticSans150'>
-																{item.name}
-															</p>
-															<p className='ml-4 mb-2 mr-4 text-blue font-authenticSans90'>
-																{item.role}
-															</p>
-														</div>
-													</Link>
+													className={`${align()} + col-span-4 max-h-32 rounded-3xl bg-silver text-silver tracking-tight leading-5 flex flex-col align-middle break-words`}>
+													{/* <Link to={'/about/'}> */}
+													<div className='m-auto align-middle'>
+														<p className='ml-4 mr-4 mt-2 text-blue font-authenticSans150'>
+															{item.name}
+														</p>
+														<p className='ml-4 mb-2 mr-4 text-blue font-authenticSans90'>
+															{item.role}
+														</p>
+													</div>
+													{/* </Link> */}
 												</div>
+												{/* </a> */}
 												<div className={alignColCredits()}></div>
 											</>
 										);
@@ -139,7 +141,9 @@ function Project({ projectinfo }) {
 												<>
 													<div
 														key={item.name}
-														className={`${align()} + col-span-4 max-h-32 rounded-3xl bg-silver text-silver tracking-tight leading-5 flex flex-col align-middle`}>
+														className={`${align()} + col-span-6 
+														md:col-span-4 lg:col-span-4 xl:col-span-4 2xl:col-span-4
+														max-h-32 rounded-3xl bg-silver text-silver tracking-tight leading-5 flex flex-col align-middle break-words`}>
 														<div className='m-auto align-middle'>
 															<p className='ml-4 mr-4 mt-2 text-blue font-authenticSans150'>
 																{item.name}
