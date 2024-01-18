@@ -2,7 +2,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import { useLocation } from 'react-router-dom';
 
-import HeaderLogo from './pages/HeaderLogo';
 // import Menu from './pages/Menu';
 import Projects from './pages/Projects';
 import About from './pages/About';
@@ -50,7 +49,6 @@ function App() {
 		<Router>
 			<div className='w-screen h-full overflow-hidden relative shrink-0 m-0 p-0'>
 				{/* {location.pathname !== '/' ? <Menu /> : null} */}
-				<HeaderLogo></HeaderLogo>
 				<Routes>
 					<Route path='/' element={<Home />} />
 					<Route path='/projects' element={<Projects />} />

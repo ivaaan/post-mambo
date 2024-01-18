@@ -1,9 +1,12 @@
 import Menu from './Menu';
 import contacts from '../data/contacts.json';
+import HeaderLogo from './HeaderLogo';
 
 function Contact() {
 	return (
 		<div>
+			<HeaderLogo></HeaderLogo>
+
 			<Menu />
 
 			<>
