@@ -96,13 +96,15 @@ function Project({ projectinfo }) {
 					<div className='grid grid-cols-8 gap-4 ml-0 mr-0 mb-20'>
 						{/* Left: poster */}
 						<div className='col-start-1 col-span-8 lg:col-span-4 xl:col-span-4 2xl:col-span-4'>
-							<img src={projectinfo.image} className=''></img>
+							{projectinfo.image ? (
+								<img src={projectinfo.image} className=''></img>
+							) : null}
 						</div>
 						{/* Right */}
 						<div className='col-start-1 col-span-8 lg:col-span-4 xl:col-span-4 2xl:col-span-4 sm:mt-6 md:mt-6'>
 							<div className=''>
 								<h1
-									className={`${align()} + uppercase text-silver text-8xl break-all font-authenticSans150`}>
+									className={`${align()} + uppercase text-silver text-6xl md:text-8xl lg:text-8xl xl:text-8xl 2xl:text-8xl break-words font-authenticSans150`}>
 									{projectinfo.title}
 								</h1>
 								{/* Sub-grid for credits */}
@@ -114,9 +116,9 @@ function Project({ projectinfo }) {
 											<>
 												<div
 													key={item.name}
-													className={`${align()} + col-span-4 max-h-16 rounded-3xl bg-silver text-silver tracking-tight leading-5 flex flex-col h-screen`}>
+													className={`${align()} + col-span-4 max-h-32 rounded-3xl bg-silver text-silver tracking-tight leading-5 flex flex-col align-middle`}>
 													<Link to={'/about/'}>
-														<div className='m-auto'>
+														<div className='m-auto align-middle'>
 															<p className='ml-4 mr-4 mt-2 text-blue font-authenticSans150'>
 																{item.name}
 															</p>
@@ -137,8 +139,8 @@ function Project({ projectinfo }) {
 												<>
 													<div
 														key={item.name}
-														className={`${align()} + col-span-4 max-h-16 rounded-3xl bg-silver text-silver tracking-tight leading-5 flex flex-col h-screen`}>
-														<div className='m-auto'>
+														className={`${align()} + col-span-4 max-h-32 rounded-3xl bg-silver text-silver tracking-tight leading-5 flex flex-col align-middle`}>
+														<div className='m-auto align-middle'>
 															<p className='ml-4 mr-4 mt-2 text-blue font-authenticSans150'>
 																{item.name}
 															</p>

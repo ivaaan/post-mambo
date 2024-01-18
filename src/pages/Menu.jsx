@@ -2,7 +2,14 @@ import { Link } from 'react-router-dom';
 
 function Menu() {
 	return (
-		<div className='fixed z-50 pt-2 lg:pt-12 xl:pt-12 2xl:pt-12 right-1 md:right-20 lg:right-40 xl:right-60 font-authenticSans150'>
+		<div
+			className='fixed z-50 
+		
+		bottom-6 right-6
+		
+		lg:top-12 xl:top-12 2xl:top-12 md:right-20 lg:right-40 xl:right-60
+		
+		font-authenticSans150'>
 			<div className='rounded-3xl bg-silver text-blue tracking-tight flex relative'>
 				<div
 					className={`col-span-1 row-span-2 ml-2 border-r-2 border-blue-500`}>
