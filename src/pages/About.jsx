@@ -40,11 +40,11 @@ function About() {
 	}
 
 	return (
-		<div>
+		<div className='bg-blue pb-40'>
 			<Menu />
 
 			{people.map((personinfo) => (
-				<div key={personinfo.name} className='relative pb-40'>
+				<div key={personinfo.name} className='relative'>
 					<Person personinfo={personinfo} />
 					<div className='bottom-16 left-16 absolute text-silver font-authenticSans150'>
 						<div className='grid grid-cols-12 gap-2'>
