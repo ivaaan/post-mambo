@@ -44,7 +44,7 @@ function About() {
 			<Menu />
 
 			{people.map((personinfo) => (
-				<div key={personinfo.name} className='relative'>
+				<div key={personinfo.name} className='relative pb-40'>
 					<Person personinfo={personinfo} />
 					<div className='bottom-16 left-16 absolute text-silver font-authenticSans150'>
 						<div className='grid grid-cols-12 gap-2'>
