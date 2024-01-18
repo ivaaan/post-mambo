@@ -35,19 +35,19 @@
 			},
 			{
 				"type": "laurel",
-				"image": "/laurel-tiff-2022.png"
+				"image": "/laurel-tiff-2022-white.png"
 			},
 			{
 				"type": "laurel",
-				"image": "/tahara-laurel-slamdance.png"
+				"image": "/tahara-laurel-slamdance-white.png"
 			},
 			{
 				"type": "laurel",
-				"image": "/tahara-laurel-outfest.png"
+				"image": "/tahara-laurel-outfest-white.png"
 			},
 			{
 				"type": "laurel",
-				"image": "/tahara-laurel-maryland.png"
+				"image": "/tahara-laurel-maryland-white.png"
 			}
 		],
 		"description": "“Tahara” uses its sound design, inspired by Radiolab and Kelly Reichardt, to create deeply textured and emotionally resonant sonic narratives. The deliberate directorial choices, from the absence of a traditional score to the square aspect ratio, allow a multi-dimensional auditory experience to emerge - between the magnified Foley and expansive ambiences - one that uncovers the intricate inner worlds of its young adult characters as they navigate the challenges of aging, processing mortality, falling in love, filling in identity, and finding spirituality.",
@@ -85,7 +85,7 @@
 			},
 			{
 				"type": "laurel",
-				"image": "/laurel-tiff-2022.png"
+				"image": "/laurel-tiff-2022-white.png"
 			},
 			{
 				"type": "laurel",
@@ -93,7 +93,7 @@
 			},
 			{
 				"type": "laurel",
-				"image": "/laurel-annarbor-2023.png"
+				"image": "/laurel-annarbor-2023-white.png"
 			}
 		],
 		"description": "Against Reality stemmed from a collaboration between Olivia Peace, using GANS, and Justin Enoch, using MAX MSP, to chronicle lucid dreams by drawing on the collective consciousness of the internet and artificial technology to imagine a natural flow of thoughts unmediated by conventional logic.",
