@@ -66,7 +66,7 @@ function About() {
 										<div className={alignColCredits()}></div>
 										<div
 											key={item.title}
-											className={`${align()} + col-span-4 max-h-16 rounded-3xl bg-silver tracking-tight flex flex-col h-screen`}>
+											className={`${align()} + col-span-4 max-h-36 rounded-3xl bg-silver tracking-tight flex flex-col`}>
 											<Link to={'/projects/' + `${item.id}`}>
 												<div className='m-auto'>
 													<p className='ml-4 mr-4 mt-2 text-blue font-authenticSans150'>

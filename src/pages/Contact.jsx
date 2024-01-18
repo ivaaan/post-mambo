@@ -9,10 +9,10 @@ function Contact() {
 			<>
 				{/* <div className='overlay'></div> */}
 
-				<div className='overflow-hidden shrink-0 h-screen relative'>
-					<div className='inline-block mt-40'>
+				<div className='overflow-hidden shrink-0 h-screen relative bg-olive'>
+					<div className='inline-block'>
 						<div className='mt-40 ml-8 mr-8'>
-							<div className='w-screen flex flex-col items-center justify-center'>
+							<div className='w-screen flex flex-col items-center justify-center align-center'>
 								{contacts.map((contact) => (
 									<div
 										key={contact.job}
@@ -20,7 +20,7 @@ function Contact() {
 										{contact.job}
 										<a
 											href={`mailto:${contact.email}`}
-											className='text-4xl ml-3'>
+											className='max-[640px]:text-2xl text-4xl ml-3'>
 											{contact.email}
 										</a>
 									</div>
