@@ -16,7 +16,7 @@ function Home() {
 					'>
 						<div
 							className='ml-1 w-full md:w-2/3 lg:w-2/3 xl:w-2/3 2xl:w-2/3
-					fixed					
+					absolute
 					rounded-3xl bg-silver text-blue tracking-tight p-8 font-authenticSans90 text-2xl'>
 							<div className=''>
 								<span className='w-1/2'>
