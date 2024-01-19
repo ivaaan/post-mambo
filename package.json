@@ -14,6 +14,7 @@
     "esbuild": "^0.19.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-player": "^2.14.1",
     "react-router-dom": "^6.15.0",
     "react-shuffle": "^2.1.0",
     "react-youtube": "^10.1.0",

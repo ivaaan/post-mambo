@@ -5,7 +5,7 @@ function Project({ personinfo }) {
 			<div className='overlay'></div>
 
 			<div
-				className={`overflow-hidden bg-blue design pb-20 shrink-0 w-full md:shrink-0`}>
+				className={`overflow-hidden bg-darkyellow design pb-20 shrink-0 w-full md:shrink-0`}>
 				<div className='inline-block mt-20'>
 					{/* <div className='grid grid-cols-8 gap-4 ml-0 mr-0 mb-20'> */}
 					<div className='ml-8 mr-8 mb-20 grid grid-cols-2'>

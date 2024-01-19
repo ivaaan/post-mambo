@@ -1,4 +1,5 @@
 import Vimeo from '@u-wave/react-vimeo';
+import ReactPlayer from 'react-player';
 // import Menu from './Menu';
 // import { Link } from 'react-router-dom';
 import Menu from './Menu';
@@ -13,11 +14,13 @@ function Home() {
 			<div className='bg-blue z-50 m-0 p-0 flex'>
 				<div
 					className='
+					
 					max-[640px]:hidden
 					flex items-center align-center absolute
+					items-end justify-end
 					'>
 					<div
-						className='mt-40 ml-1 w-full md:w-2/3 lg:w-2/3 xl:w-2/3 2xl:w-2/3
+						className='mt-60 w-full md:w-2/3 lg:w-2/3 xl:w-2/3 2xl:w-2/3
 					rounded-3xl bg-silver text-blue tracking-tight p-8 font-authenticSans90 text-2xl'>
 						<div className=''>
 							<span className='w-1/2'>
@@ -39,8 +42,24 @@ function Home() {
 				<div className='w-screen h-screen bg-blue overflow-hidden shrink-0 m-0 p-0'>
 					<div className='flex flex-col w-full items-center'>
 						<div className='aspect-video'>
+							{/* <ReactPlayer
+								url='https://www.youtube.com/watch?v=pIksLwX15rc'
+								playing='true'
+								// width={props.width}
+								// height='700'
+								loop='true'
+								muted='true'
+							/> */}
+							{/* <iframe
+								// frameBorder='0'
+								allowfullscreen=''
+								// scrolling='no'
+								allow='autoplay;fullscreen'
+								src='https://onelineplayer.com/player.html?autoplay=true&autopause=false&muted=true&loop=true&url=https%3A%2F%2Fvimeo.com%2F902728728&poster=&time=false&progressBar=false&overlay=false&muteButton=false&fullscreenButton=false&style=light&quality=auto&playButton=false'></iframe> */}
 							<Vimeo
+								// og video
 								// video='858109861'
+								// normal video
 								video='902728728'
 								muted='true'
 								background='true'

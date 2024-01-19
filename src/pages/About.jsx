@@ -41,7 +41,7 @@ function About() {
 	}
 
 	return (
-		<div className='bg-blue pb-40'>
+		<div className='bg-darkyellow pb-40'>
 			<HeaderLogo></HeaderLogo>
 
 			<Menu />

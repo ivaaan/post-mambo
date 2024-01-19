@@ -25,6 +25,8 @@ export default {
 			black: '#000015',
 			folly: '#ff1053',
 			vermilion: '#f64740',
+			dark: '#232323',
+			darkyellow: '#E4CC36',
 		},
 		fontFamily: {
 			authenticSans60: ['"AUTHENTIC Sans 60"'],

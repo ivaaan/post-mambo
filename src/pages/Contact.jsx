@@ -12,7 +12,7 @@ function Contact() {
 			<>
 				{/* <div className='overlay'></div> */}
 
-				<div className='overflow-hidden shrink-0 h-screen relative bg-olive'>
+				<div className='overflow-hidden shrink-0 h-screen relative bg-dark'>
 					<div className='inline-block'>
 						<div className='mt-40 ml-8 mr-8'>
 							<div className='w-screen flex flex-col items-center justify-center align-center'>
