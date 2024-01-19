@@ -8,7 +8,7 @@ function Project({ personinfo }) {
 				className={`overflow-hidden bg-darkyellow design pb-20 shrink-0 w-full md:shrink-0`}>
 				<div className='inline-block mt-20'>
 					{/* <div className='grid grid-cols-8 gap-4 ml-0 mr-0 mb-20'> */}
-					<div className='ml-8 mr-8 mb-20 grid grid-cols-2'>
+					<div className='ml-8 mr-8 mb-20 grid min-[640px]:grid-cols-2'>
 						{/* Left: poster */}
 						<div className='col-start-0 col-span-1'>
 							<img src={personinfo.photo} className=''></img>

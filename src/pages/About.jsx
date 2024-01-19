@@ -49,7 +49,7 @@ function About() {
 			{people.map((personinfo) => (
 				<div key={personinfo.name} className='relative'>
 					<Person personinfo={personinfo} />
-					<div className='bottom-16 left-16 absolute text-silver font-authenticSans150'>
+					<div className='max-[640px]:top-16 min-[640px]:bottom-16 left-16 absolute text-silver font-authenticSans150'>
 						<div className='grid grid-cols-12 gap-2'>
 							<div className={alignColCredits()}></div>
 							{findProjectsByCredit(personinfo.name).map((item) => {
@@ -66,10 +66,10 @@ function About() {
 								// }
 								return (
 									<>
-										<div className={alignColCredits()}></div>
+										{/* <div className={alignColCredits()}></div> */}
 										<div
 											key={item.title}
-											className={`${align()} + col-span-6 min-[640px]:col-span-4 max-h-36 rounded-3xl bg-silver tracking-tight flex flex-col`}>
+											className={`${align()} + col-span-4 max-h-36 rounded-3xl bg-silver tracking-tight flex flex-col`}>
 											<Link to={'/projects/' + `${item.id}`}>
 												<div className='m-auto'>
 													<p className='ml-4 mr-4 mt-2 text-blue font-authenticSans150'>
