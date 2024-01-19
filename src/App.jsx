@@ -10,6 +10,7 @@ import Contact from './pages/Contact';
 import Project from './pages/Project';
 import Test from './pages/Test';
 import Test2 from './pages/Test2';
+import HeaderLogo from './pages/HeaderLogo';
 
 function App() {
 	// const location = useLocation();
@@ -48,6 +49,7 @@ function App() {
 	return (
 		<Router>
 			<div className='w-screen h-full overflow-hidden relative shrink-0 m-0 p-0'>
+				<HeaderLogo />
 				{/* {location.pathname !== '/' ? <Menu /> : null} */}
 				<Routes>
 					<Route path='/' element={<Home />} />

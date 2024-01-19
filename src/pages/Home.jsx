@@ -2,12 +2,10 @@ import Vimeo from '@u-wave/react-vimeo';
 // import Menu from './Menu';
 // import { Link } from 'react-router-dom';
 import Menu from './Menu';
-import HeaderLogo from './HeaderLogo';
 
 function Home() {
 	return (
 		<>
-			<HeaderLogo />
 
 			<Menu />
 			<div className='bg-blue z-50 m-0 p-0 flex'>

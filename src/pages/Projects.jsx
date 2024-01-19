@@ -1,12 +1,12 @@
 import Project from './Project';
 import projects from '../data/projects.json';
 import Menu from './Menu';
-import HeaderLogo from './HeaderLogo';
+// import HeaderLogo from './HeaderLogo';
 
 function Projects() {
 	return (
 		<div>
-			<HeaderLogo></HeaderLogo>
+			{/* <HeaderLogo></HeaderLogo> */}
 
 			<Menu />
 
