@@ -11,7 +11,9 @@ function Project({ personinfo }) {
 					<div className='ml-8 mr-8 mb-20 grid min-[640px]:grid-cols-2'>
 						{/* Left: poster */}
 						<div className='col-start-0 col-span-1'>
-							<img src={personinfo.photo} className=''></img>
+							<img
+								src={personinfo.photo}
+								className='object-scale-down max-h-screen'></img>
 						</div>
 						{/* Right */}
 						<div className='col-span-1 sm:mt-6 md:mt-6'>

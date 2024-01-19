@@ -1,5 +1,4 @@
 import Vimeo from '@u-wave/react-vimeo';
-import ReactPlayer from 'react-player';
 // import Menu from './Menu';
 // import { Link } from 'react-router-dom';
 import Menu from './Menu';
@@ -20,7 +19,7 @@ function Home() {
 					items-end justify-end
 					'>
 					<div
-						className='mt-60 w-full md:w-2/3 lg:w-2/3 xl:w-2/3 2xl:w-2/3
+						className='mt-80 w-2/3
 					rounded-3xl bg-silver text-blue tracking-tight p-8 font-authenticSans90 text-2xl'>
 						<div className=''>
 							<span className='w-1/2'>

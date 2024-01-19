@@ -69,13 +69,13 @@ function About() {
 										{/* <div className={alignColCredits()}></div> */}
 										<div
 											key={item.title}
-											className={`${align()} + col-span-4 max-h-36 rounded-3xl bg-silver tracking-tight flex flex-col`}>
+											className={`${align()} + col-span-5 max-h-40 rounded-3xl bg-silver tracking-tight flex flex-col`}>
 											<Link to={'/projects/' + `${item.id}`}>
 												<div className='m-auto'>
-													<p className='ml-4 mr-4 mt-2 text-blue font-authenticSans150'>
+													<p className='ml-4 mr-4 mt-2 text-blue font-authenticSans150 break-word'>
 														{item.title}
 													</p>
-													<p className='ml-4 mb-2 mr-4 text-blue font-authenticSans90'>
+													<p className='ml-4 mb-2 mr-4 text-blue font-authenticSans90 break-word'>
 														{findRoleByName(personinfo.name, item)[0].role}
 													</p>
 												</div>
