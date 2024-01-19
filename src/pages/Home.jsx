@@ -42,7 +42,7 @@ function Home() {
 							<Vimeo
 								// video='858109861'
 								video='902728728'
-								// muted='true'
+								muted='true'
 								background='true'
 								// controls='false'
 								height='700'
