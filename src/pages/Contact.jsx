@@ -23,7 +23,7 @@ function Contact() {
 										{contact.job}
 										<a
 											href={`mailto:${contact.email}`}
-											className='max-[640px]:text-2xl text-4xl ml-3'>
+											className='text-4xl ml-3'>
 											{contact.email}
 										</a>
 									</div>

@@ -2,18 +2,22 @@ import Vimeo from '@u-wave/react-vimeo';
 // import Menu from './Menu';
 // import { Link } from 'react-router-dom';
 import Menu from './Menu';
+import HeaderLogo from './HeaderLogo';
 
 function Home() {
 	return (
 		<>
+			<HeaderLogo />
+
 			<Menu />
 			<div className='bg-blue z-50 m-0 p-0 flex'>
 				<div
 					className='
+					max-[640px]:hidden
 					flex items-center align-center absolute
 					'>
 					<div
-						className='ml-1 w-full md:w-2/3 lg:w-2/3 xl:w-2/3 2xl:w-2/3
+						className='mt-40 ml-1 w-full md:w-2/3 lg:w-2/3 xl:w-2/3 2xl:w-2/3
 					rounded-3xl bg-silver text-blue tracking-tight p-8 font-authenticSans90 text-2xl'>
 						<div className=''>
 							<span className='w-1/2'>
