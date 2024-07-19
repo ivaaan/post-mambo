@@ -200,9 +200,9 @@
 		],
 		"videos": [
 			{
-				"source": "vimeo",
-				"id": "",
-				"description": ""
+				"source": "youtube",
+				"id": "SMTgDRqfLPE",
+				"description": "Full Video"
 			}
 		]
 	},
