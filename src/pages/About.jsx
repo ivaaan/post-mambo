@@ -3,7 +3,7 @@ import projects from '../data/projects.json';
 import Person from './Person';
 import Menu from './Menu';
 import { Link } from 'react-router-dom';
-import HeaderLogo from './HeaderLogo';
+// import HeaderLogo from './HeaderLogo';
 
 function findProjectsByCredit(name) {
 	return projects.filter((project) => {
