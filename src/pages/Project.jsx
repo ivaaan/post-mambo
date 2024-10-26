@@ -1,97 +1,65 @@
-/* eslint-disable react/prop-types */
 import YouTube from 'react-youtube';
 import Vimeo from '@u-wave/react-vimeo';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 import projects from '../data/projects.json';
 import Menu from './Menu';
-import { Link } from 'react-router-dom';
 
-function shuffle(arra1) {
-	var ctr = arra1.length,
+function shuffle (array) {
+	var ctr = array.length,
 		temp,
 		index;
 	while (ctr > 0) {
 		index = Math.floor(Math.random() * ctr);
 		ctr--;
-		temp = arra1[ctr];
-		arra1[ctr] = arra1[index];
-		arra1[index] = temp;
+		temp = array[ctr];
+		array[ctr] = array[index];
+		array[index] = temp;
 	}
-	return arra1;
+	return array;
 }
 
-function findProjectById(id) {
-	return projects.filter((project) => project.id === id)[0];
+function findProjectById (id) {
+	return projects.find((project) => project.id === id);
 }
 
-function Project({ projectinfo }) {
-	const [creditsLaurels, setCreditsLaurels] = useState([]);
+function Project ({ projectinfo: initialProjectInfo }) {
 	const { id } = useParams();
-	console.log('id', findProjectById(id));
-	projectinfo
-		? console.log('projectinfo', projectinfo)
-		: (projectinfo = findProjectById(id));
+	const [creditsLaurels, setCreditsLaurels] = useState([]);
+
+	const projectinfo = useMemo(() => initialProjectInfo || findProjectById(id), [initialProjectInfo, id]);
 
 	useEffect(() => {
-		const mountArray = shuffle(projectinfo.creditslaurels);
-		setCreditsLaurels(mountArray);
-		console.log('shuffled state', creditsLaurels);
+		if (projectinfo) {
+			const mountArray = shuffle([...projectinfo.creditslaurels]);
+			setCreditsLaurels(mountArray);
+			window.scrollTo(0, 0);
+		}
+	}, [projectinfo]);
 
-		window.scrollTo(0, 0);
+	const randomColor = useCallback(() => {
+		const colorsArr = ['bg-blue', 'bg-pink', 'bg-orange', 'bg-olive', 'bg-navy', 'bg-green', 'bg-yellowgreen', 'bg-black', 'bg-folly', 'bg-vermilion'];
+		return colorsArr[Math.floor(Math.random() * colorsArr.length)];
 	}, []);
 
-	const colorsArr = [
-		'bg-blue',
-		'bg-pink',
-		'bg-orange',
-		'bg-olive',
-		'bg-navy',
-		'bg-green',
-		'bg-yellowgreen',
-		'bg-black',
-		'bg-folly',
-		'bg-vermilion',
-	];
+	const align = useCallback(() => {
+		const alignArr = ['text-left', 'text-center', 'text-right'];
+		return alignArr[Math.floor(Math.random() * alignArr.length)];
+	}, []);
 
-	function randomColor() {
-		return colorsArr[Math.floor(Math.random() * colorsArr.length)];
-	}
+	const alignColCredits = useCallback(() => {
+		const colArrCredits = ['col-span-1', 'col-span-2', 'col-span-3', 'col-span-4', 'col-span-5', 'col-span-6', 'col-span-7'];
+		return colArrCredits[Math.floor(Math.random() * colArrCredits.length)];
+	}, []);
 
-	console.log('randomColor()', randomColor());
-
-	const alignArr = ['text-left', 'text-center', 'text-right'];
-
-	function align() {
-		return alignArr[(alignArr.length * Math.random()) | 0];
-	}
-	const colArrCredits = [
-		'col-span-1',
-		'col-span-2',
-		'col-span-3',
-		'col-span-4',
-		'col-span-5',
-		'col-span-6',
-		'col-span-7',
-		// 'col-span-8',
-		// 'col-span-9',
-		// 'col-span-10',
-		// 'col-span-11',
-		// 'col-span-12',
-	];
-
-	function alignColCredits() {
-		return colArrCredits[(colArrCredits.length * Math.random()) | 0];
+	if (!projectinfo) {
+		return <div>Project not found</div>;
 	}
 
 	return (
 		<>
-			{id ? <Menu /> : null}
-
-			{/* <div className='overlay'></div> */}
-
-			<div
-				className={`overflow-hidden ${randomColor()} design shrink-0 w-full md:shrink-0`}>
+			{id && <Menu />}
+			<div className={`overflow-hidden ${randomColor()} design shrink-0 w-full md:shrink-0`}>
 				<div className='inline-block mt-20'>
 					<div className='grid grid-cols-8 gap-4 ml-0 mr-0 mb-20'>
 						{/* Left: poster */}
@@ -114,11 +82,9 @@ function Project({ projectinfo }) {
 									{projectinfo.creditspriority.map((item) => {
 										return (
 											<>
-												{/* <a href='/about'> */}
 												<div
 													key={item.name}
 													className={`${align()} + col-span-4 max-h-32 rounded-3xl bg-silver text-silver tracking-tight leading-5 flex flex-col align-middle break-words`}>
-													{/* <Link to={'/about/'}> */}
 													<div className='m-auto align-middle'>
 														<p className='ml-4 mr-4 mt-2 text-blue font-authenticSans150'>
 															{item.name}
@@ -127,9 +93,7 @@ function Project({ projectinfo }) {
 															{item.role}
 														</p>
 													</div>
-													{/* </Link> */}
 												</div>
-												{/* </a> */}
 												<div className={alignColCredits()}></div>
 											</>
 										);
@@ -184,10 +148,6 @@ function Project({ projectinfo }) {
 										opts={{
 											height: '300',
 											width: '100%',
-											// playerVars: {
-											// 	// https://developers.google.com/youtube/player_parameters
-											// 	autoplay: 1,
-											// },
 										}}
 										containerClassName={'youtubeContainer'}
 									/>
@@ -197,7 +157,6 @@ function Project({ projectinfo }) {
 									<Vimeo
 										video={projectinfo.videos[0].id}
 										height='300'
-										// width='100vw'
 									/>
 								)}
 							</div>

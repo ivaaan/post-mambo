@@ -4,6 +4,7 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+/node_modules/
 # Editor-based HTTP Client requests
 /httpRequests/
 # ----

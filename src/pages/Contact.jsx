@@ -1,17 +1,11 @@
 import Menu from './Menu';
 import contacts from '../data/contacts.json';
-// import HeaderLogo from './HeaderLogo';
 
-function Contact() {
+function Contact () {
 	return (
 		<div>
-			{/* <HeaderLogo></HeaderLogo> */}
-
 			<Menu />
-
 			<>
-				{/* <div className='overlay'></div> */}
-
 				<div className='overflow-hidden shrink-0 h-screen relative bg-dark'>
 					<div className='inline-block'>
 						<div className='mt-60 ml-8 mr-8'>

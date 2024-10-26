@@ -1,5 +1,4 @@
-/* eslint-disable react/prop-types */
-function Project({ personinfo }) {
+function Project ({ personinfo }) {
 	return (
 		<>
 			<div className='overlay'></div>
@@ -7,24 +6,16 @@ function Project({ personinfo }) {
 			<div
 				className={`overflow-hidden bg-darkyellow design shrink-0 w-full md:shrink-0`}>
 				<div className='inline-block mt-10'>
-					{/* <div className='grid grid-cols-8 gap-4 ml-0 mr-0 mb-20'> */}
 					<div className='ml-8 mr-8 mb-20 grid min-[640px]:grid-cols-2'>
-						{/* Left: poster */}
 						<div className='col-start-0 col-span-1'>
 							<img
 								src={personinfo.photo}
 								className='object-scale-down max-h-screen'></img>
 						</div>
-						{/* Right */}
 						<div className='col-span-1 sm:mt-6 md:mt-6'>
-							{/* description*/}
 							<p className='mt-4 text-silver text-center text-xl font-authenticSans130 tracking-tight'>
 								{personinfo.bio}
 							</p>
-							{/* <h1
-								className={`uppercase text-silver text-8xl break-all font-authenticSans150`}>
-								{personinfo.name}
-							</h1> */}
 						</div>
 						<div className='absolute'>
 							<h1
